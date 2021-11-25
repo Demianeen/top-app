@@ -1,17 +1,19 @@
 import { GetStaticProps } from 'next';
-import { useState } from 'react';
+// import { ParsedUrlQuery } from 'querystring';
+import React, { useState } from 'react';
 import { Button, Htag, P, Rating, Tag } from '../components';
 import { withLayout } from '../layout/Layout';
-import axios from 'axios';
-import { MenuItem } from '../interfaces/menu.interface';
+import axios, { AxiosResponse } from 'axios';
+import { MenuItem, PageItem } from '../interfaces/menu.interface';
+import { Search } from '../layout/Search/Search';
 
 function Home({ menu }: HomeProps): JSX.Element {
 	const [rating, setRating] = useState<number>(4);
 	return (
 		<>
 			<Htag tag="h1">Title</Htag>
-			<Button appearance="primary" arrow="right">
-				Button
+			<Button appearance="primary" arrow="right" onClick={() => Search()}>
+				Search
 			</Button>
 			<Button appearance="ghost" arrow="down">
 				Button
@@ -30,27 +32,23 @@ function Home({ menu }: HomeProps): JSX.Element {
 			</Tag>
 			<Tag size="medium">Little</Tag>
 			<Rating rating={rating} isEditable setRating={setRating}></Rating>
-			<ul>
-				{menu.map((m) => (
-					<li key={m._id.secondCategory}>m._id.secondCategory</li>
-				))}
-			</ul>
 		</>
 	);
 }
 
 export default withLayout(Home);
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const firstCategory = 0;
-	const { data: menu } = await axios.T_PUBLIC_DOMAIN + '/api/top-page/find', {
-		firstCategory
-	}
-	);post<MenuItem[]>(
-		process.env.NEX
+	const { data }: AxiosResponse<MenuItem[]> = await axios.post(
+		process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
+		{
+			firstCategory,
+		}
+	);
 	return {
 		props: {
-			menu,
+			menu: data,
 			firstCategory,
 		},
 	};

@@ -10,11 +10,6 @@ export const Htag = ({ tag, children }: HtagProps): JSX.Element => {
 		case 'h3':
 			return <h3 className={styles.h3}>{children}</h3>;
 		default:
-			<></>;
+			return <></>;
 	}
-	// return{
-	// 	{tag == 'h1' && <h1>{children}</h1>}
-	// 	{tag == 'h2' && <h2>{children}</h2>}
-	// 	{tag == 'h3' && <h3>{children}</h3>}
-	// }
 };
