@@ -1,3 +1,4 @@
+/* eslint-env node */
 {
 	"root": true,
 	"parser": "@typescript-eslint/parser",

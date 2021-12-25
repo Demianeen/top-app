@@ -75,8 +75,8 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({
 		}
 		const { data: page }: AxiosResponse<TopPageModel> = await axios.get(
 			process.env.NEXT_PUBLIC_DOMAIN +
-				'/api/top-page/byAlias/' +
-				params.alias
+			'/api/top-page/byAlias/' +
+			params.alias
 		);
 		const { data: products }: AxiosResponse<ProductModel[]> =
 			await axios.post(
