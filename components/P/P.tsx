@@ -4,7 +4,7 @@ import { PProps } from './P.props';
 import cn from 'classnames';
 
 export const P = ({
-	size = 'medium',
+	size = 'm',
 	children,
 	className,
 	...props
@@ -12,9 +12,9 @@ export const P = ({
 	return (
 		<p
 			className={cn(styles.p, className, {
-				[styles.little]: size == 'little',
-				[styles.medium]: size == 'medium',
-				[styles.big]: size == 'big',
+				[styles.little]: size == 's',
+				[styles.medium]: size == 'm',
+				[styles.big]: size == 'l',
 			})}
 			{...props}
 		>

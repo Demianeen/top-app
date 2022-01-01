@@ -1,37 +1,35 @@
 import { GetStaticProps } from 'next';
 // import { ParsedUrlQuery } from 'querystring';
 import React, { useState } from 'react';
-import { Button, Htag, P, Rating, Tag } from '../components';
+import { Button, Htag, Input, P, Rating, Tag, Textarea } from '../components';
 import { withLayout } from '../layout/Layout';
 import axios, { AxiosResponse } from 'axios';
 import { MenuItem, PageItem } from '../interfaces/menu.interface';
-import { Search } from '../layout/Search/Search';
 
 function Home({ menu }: HomeProps): JSX.Element {
 	const [rating, setRating] = useState<number>(4);
 	return (
 		<>
 			<Htag tag="h1">Title</Htag>
-			<Button appearance="primary" arrow="right" onClick={() => Search()}>
-				Search
-			</Button>
 			<Button appearance="ghost" arrow="down">
 				Button
 			</Button>
-			<P size="big">Big</P>
-			<P size="medium">Medium</P>
-			<P size="little">Little</P>
-			<Tag size="little" color="red">
+			<P size="l">Big</P>
+			<P size="m">Medium</P>
+			<P size="s">Little</P>
+			<Tag size="l" color="red">
 				Little
 			</Tag>
-			<Tag size="medium" color="green">
+			<Tag size="m" color="green">
 				Little
 			</Tag>
-			<Tag size="little" color="primary">
+			<Tag size="l" color="primary">
 				Little
 			</Tag>
-			<Tag size="medium">Little</Tag>
+			<Tag size="m">Little</Tag>
 			<Rating rating={rating} isEditable setRating={setRating}></Rating>
+			<Input placeholder="test" />
+			<Textarea placeholder="test" />
 		</>
 	);
 }

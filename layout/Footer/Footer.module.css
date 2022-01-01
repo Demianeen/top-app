@@ -1,23 +1,23 @@
 .footer {
-	display: grid;
-	gap: 10px 40px;
+  display: grid;
+  gap: 10px 40px;
 
-	padding: 25px 30px;
+  padding: 25px 30px;
 
-	font-size: 16px;
-	line-height: 20px;
-	color: white;
-	background-color: var(--primary);
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  background-color: var(--primary);
 
-	grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto;
 }
 
 .footer a:hover {
-	color: var(--gray-light);
+  color: var(--grey-light);
 }
 
 @media (max-width: 765px) {
-	.footer {
-		grid-template-columns: 1fr;
-	}
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }

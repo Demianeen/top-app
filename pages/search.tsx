@@ -10,12 +10,9 @@ function Search(): JSX.Element {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const firstCategory = 0;
-	const { data: menu } = await axios.post(
-		process.env.NEXT_PUBLIC_DOMAIN + '/search',
-		{
-			firstCategory,
-		}
-	);
+	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+		firstCategory
+	});
 
 	return {
 		props: {
@@ -25,7 +22,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	};
 };
 
-withLayout(Search);
+export default withLayout(Search);
 
 interface HomeProps extends Record<string, unknown> {
 	menu: MenuItem[];

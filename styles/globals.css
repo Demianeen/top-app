@@ -1,35 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	color: var(--black);
-	background: #f5f6f8;
+  color: var(--black);
+  background: #f5f6f8;
 
-	font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 
-	color: inherit;
+  color: inherit;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-	--black: #3b434e;
-	--gray-light: #ebebeb;
-	--grey-dark: #787d85;
-	--white: white;
-	--primary: #7653fc;
-	--primary-hover: #6946f5;
-	--red: #fc836d;
-	--green: #1dc37e;
-	--green-light: #c8f8e4;
-	--font-family: 'Noto Sans KR', sans-serif;
+  --black: #3b434e;
+  --grey-light: #ebebeb;
+  --grey: #a4a4a4;
+  --grey-dark: #787d85;
+  --white: white;
+  --primary: #7653fc;
+  --primary-hover: #6946f5;
+  --red: #fc836d;
+  --green: #1dc37e;
+  --green-light: #c8f8e4;
+  --font-family: "Open Sans", sans-serif;
 }

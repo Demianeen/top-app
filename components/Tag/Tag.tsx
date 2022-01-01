@@ -4,7 +4,7 @@ import { TagProps } from './Tag.props';
 import cn from 'classnames';
 
 export const Tag = ({
-	size = 'little',
+	size = 'l',
 	children,
 	color = 'ghost',
 	href,
@@ -14,8 +14,8 @@ export const Tag = ({
 	return (
 		<p
 			className={cn(styles.tag, className, {
-				[styles.little]: size == 'little',
-				[styles.medium]: size == 'medium',
+				[styles.little]: size == 'l',
+				[styles.medium]: size == 'm',
 				[styles.ghost]: color == 'ghost',
 				[styles.red]: color == 'red',
 				[styles.grey]: color == 'grey',
