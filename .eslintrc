@@ -4,7 +4,7 @@
 	"parser": "@typescript-eslint/parser",
 	"plugins": ["@typescript-eslint"],
 	"rules": {
-		"node": true,
+		"node": 0,
 		"semi": "warn",
 		"@typescript-eslint/semi": ["warn"],
 		"@typescript-eslint/no-empty-interface": [

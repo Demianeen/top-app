@@ -3,6 +3,7 @@
   grid-template-columns:
     [start] 70px [logoend] 30px [titlestart] calc(50% - 100px)
     [middle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratingstart] auto [end];
+
   margin-top: 30px;
   padding: 30px;
 }
@@ -20,18 +21,21 @@
 .price,
 .priceTitle {
   grid-column: pricestart / priceend;
+
   white-space: nowrap;
 }
 
 .credit,
 .creditTitle {
   grid-column: creditstart / creditend;
+
   white-space: nowrap;
 }
 
 .rating,
 .ratingTitle {
   grid-column: ratingstart / end;
+
   white-space: nowrap;
 }
 
@@ -54,10 +58,11 @@
 }
 
 .title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
   align-self: flex-end;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
 }
 
 .category {
@@ -66,9 +71,10 @@
 
 .price,
 .credit {
+  align-self: flex-end;
+
   font-size: 20px;
   line-height: 27px;
-  align-self: flex-end;
 }
 
 .month {
@@ -85,16 +91,17 @@
 }
 
 .description {
+  margin-bottom: 15px;
+
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 15px;
 }
 
 .priceTitle,
 .creditTitle,
 .ratingTitle {
-  font-weight: 300;
   font-size: 14px;
+  font-weight: 300;
   line-height: 19px;
 }
 
@@ -108,30 +115,34 @@
 }
 
 .advTitle {
-  font-weight: bold;
   margin-bottom: 5px;
+
+  font-weight: bold;
 }
 
 .advantages {
-  border-left: 2px solid var(--green);
-  padding-left: 15px;
   margin-bottom: 20px;
+  padding-left: 15px;
+
+  border-left: 2px solid #1dc47e;
 }
 
 .disadvantages {
-  border-left: 2px solid var(--red);
   padding-left: 15px;
+
+  border-left: 2px solid var(--red);
 }
 
 .characteristics {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  padding-right: 60px;
   align-content: baseline;
-  gap: 10px;
+
+  padding-right: 60px;
 
   font-size: 16px;
   line-height: 32px;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
 }
 
 .characteristicsName {
@@ -139,20 +150,20 @@
 }
 
 .characteristicsDots {
-  border-bottom: 1px dashed var(--grey-light);
   margin-bottom: 5px;
+
+  border-bottom: 1px dashed var(--grey-light);
 }
 
 /* review block */
-.closed {
+.reviews {
   overflow: hidden;
-  max-height: 0;
-  padding: none;
+
+  padding: 30px;
 }
 
-.opened {
-  max-height: auto;
-  padding: 30px;
+.ratingTitle a {
+  color: var(--primary);
 }
 
 @media (max-width: 1320px) {
@@ -257,16 +268,19 @@
 
   .price {
     grid-area: price;
+
     margin-bottom: 10px;
   }
 
   .credit {
     grid-area: credit;
+
     margin-bottom: 10px;
   }
 
   .rating {
     grid-area: rating;
+
     margin-bottom: 10px;
   }
 }

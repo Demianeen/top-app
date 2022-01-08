@@ -3,6 +3,7 @@ import { MenuItem } from '../interfaces/menu.interface';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { withLayout } from '../layout/Layout';
+import { API } from '../helpers/api';
 
 function Search(): JSX.Element {
 	return <>Search</>;
@@ -10,7 +11,7 @@ function Search(): JSX.Element {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const firstCategory = 0;
-	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+	const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
 		firstCategory
 	});
 

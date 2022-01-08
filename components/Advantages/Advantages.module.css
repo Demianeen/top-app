@@ -1,25 +1,26 @@
 .advantage {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 10px 40px;
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	gap: 10px 40px;
 
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .title {
-  align-self: center;
+	align-self: center;
 
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 27px;
+	font-size: 20px;
+
+	font-weight: bold;
+	line-height: 27px;
 }
 
 .line {
-  border-left: 2px solid var(--gray-light);
+	border-left: 2px solid var(--gray-light);
 }
 
 .description {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 29px;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 29px;
 }
