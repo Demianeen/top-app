@@ -2,8 +2,8 @@ import styles from './Review.module.css';
 import { ReviewProps } from './Review.props';
 import UserIcon from './user.svg';
 import cn from 'classnames';
-import { format } from 'date-fns'
-import { ru } from 'date-fns/locale'
+import { format } from 'date-fns';
+import { ru } from 'date-fns/locale';
 import { Rating } from '..';
 
 export const Review = ({

@@ -153,6 +153,11 @@
 }
 
 /* review block */
+
+/* .reviewsBlock {
+  overflow: hidden;
+} */
+
 .reviews {
 	overflow: hidden;
 

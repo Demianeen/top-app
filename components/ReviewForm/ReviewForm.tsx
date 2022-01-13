@@ -41,6 +41,7 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
 				<Input
 					{...register('name', { required: { value: true, message: 'Заполните имя' } })}
 					placeholder='Имя'
+					className={styles.name}
 					error={errors.name}
 					tabIndex={isOpened ? 0 : -1}
 					aria-invalid={errors.name ? true : false}

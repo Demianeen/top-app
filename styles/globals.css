@@ -9,6 +9,7 @@ body {
 	background: #F5F6F8;
 
 	font-family: "Open Sans", sans-serif;
+	scroll-behavior: smooth;
 }
 
 a {

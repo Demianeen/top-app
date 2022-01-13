@@ -7,7 +7,6 @@ import { Tag } from '../Tag/Tag';
 import { Button } from '../Button/Button';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
-import Image from 'next/image';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
@@ -18,8 +17,8 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
 	const reviewRef = useRef<HTMLDivElement>(null);
 
 	const variants = {
-		visible: { opacity: 1, height: 'auto' },
-		hidden: { opacity: 0, height: 0 }
+		visible: { opacity: 1, height: 'auto', overflow: 'auto'},
+		hidden: { opacity: 0, height: 0, overflow: 'hidden'}
 	};
 
 	const scrollToReview = () => {
@@ -35,7 +34,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
 		<div className={className} {...props} ref={ref}>
 			<Card className={styles.product}>
 				<div className={styles.logo}>
-					<Image
+					<img
 						src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
 						alt={product.title}
 						width={70}
@@ -95,7 +94,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
 					>Читать отзывы</Button>
 				</div>
 			</Card>
-			<motion.div animate={isReviewOpened ? 'visible' : 'hidden'} variants={variants} initial='hidden'>
+			<motion.div animate={isReviewOpened ? 'visible' : 'hidden'} className={styles.reviewsBlock} variants={variants} initial='hidden'>
 				<Card color='blue' className={styles.reviews} ref={reviewRef} tabIndex={isReviewOpened ? 0 : -1}>
 					{product.reviews.map(r => (
 						<div key={r._id}>

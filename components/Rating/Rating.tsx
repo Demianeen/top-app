@@ -40,7 +40,7 @@ export const Rating = forwardRef(({ isEditable = false, error, rating, setRating
 					onKeyDown={handleKey}
 					ref={r => ratingArrayRef.current?.push(r)}
 					role={isEditable ? 'slider' : ''}
-					area-invalid={error ? true : false}
+					area-invalid={error ? true.toString() : false.toString()}
 					aria-valuenow={rating}
 					aria-valuemax={5}
 					aria-label={isEditable ? 'Укажите рейтинг' : ('рейтинг' + rating)}
